@@ -1,17 +1,15 @@
 /*import tn.esprit.gestionzoo.entitees.Animal;
 import tn.esprit.gestionzoo.entitees.Zoo;*/
+
 public class ZooManagement {
     public static void main(String[] args) {
 
         Animal genericAnimal = new Animal("Generic Family", "Generic Animal", 1, true);
 
-
         Aquatic genericAquatic = new Aquatic("Aquatic Family", "Aquatic Animal", 2, true, "Aquatic Habitat");
-
 
         Terrestrial genericTerrestrial = new Terrestrial("Terrestrial Family", "Terrestrial Animal", 3, true, 4);
         Dolphin dolphin = new Dolphin("Dolphin Family", "Flipper", 5, true, "Ocean", 15.0f);
-
         Penguin penguin = new Penguin("Penguin Family", "Chilly", 2, true, "Antarctica", 50.0f);
 
         displayAnimalInfo(genericAnimal);
@@ -20,7 +18,6 @@ public class ZooManagement {
         displayAquaticInfo(dolphin);
         displayAquaticInfo(penguin);
 
-
         Animal lion = new Animal("Felidae", "Simba", 5, true);
 
         Zoo myZoo = new Zoo("Wildlife Park", "Ariana");
@@ -28,8 +25,8 @@ public class ZooManagement {
 
         Animal dog = new Animal("Canine", "Snoopy", 2, true);
 
-        System.out.println(myZoo.addAnimal(lion));
-        System.out.println(myZoo.addAnimal(dog));
+        /*System.out.println(myZoo.addAnimal(lion));
+        System.out.println(myZoo.addAnimal(dog));*/
 
         myZoo.displayAnimals();
 
@@ -41,9 +38,9 @@ public class ZooManagement {
 
         System.out.println(myZoo);
 
-        myZoo.addAnimal(lion);
+       /* myZoo.addAnimal(lion);
         myZoo.addAnimal(dog);
-        myZoo.addAnimal(dog2);
+        myZoo.addAnimal(dog2);*/
         myZoo.displayAnimals();
         System.out.println("a" + myZoo.removeAnimal(lion));
         myZoo.displayAnimals();
@@ -51,7 +48,6 @@ public class ZooManagement {
         myZoo.displayAnimals();
         System.out.println("a" + myZoo.removeAnimal(dog));
         myZoo.displayAnimals();
-
     }
 
     private static void displayAnimalInfo(Animal animal) {
@@ -65,4 +61,5 @@ public class ZooManagement {
     private static void displayTerrestrialInfo(Terrestrial terrestrial) {
         System.out.println("Terrestrial Info: " + terrestrial);
     }
+
 }
