@@ -1,12 +1,12 @@
-//package tn.esprit.gestionzoo.entitees;
+package tn.esprit.gestionzoo.entities;//package tn.esprit.gestionzoo.entitees;
 
 public class Animal {
-    protected String family;
-    protected String name;
-    protected int age;
-    protected boolean isMammal;
+    private String family;
+    private String name;
+    private int age;
+    private boolean isMammal;
 
-    public Animal(String family, String name, int age, boolean isMammal) {
+    public Animal(String family, String name, int age, boolean isMammal) throws InvalidAgeException {
         this.family = family;
         this.name = name;
         setAge(age);
@@ -29,18 +29,17 @@ public class Animal {
         return isMammal;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws InvalidAgeException {
         if (age >= 0) {
             this.age = age;
         } else {
-            System.out.println("Age cannot be negative. Default value of 0 will be used.");
-            this.age = 0;
+            throw new InvalidAgeException("L'âge ne peut pas être négatif.");
         }
     }
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "tn.esprit.gestionzoo.entities.Animal{" +
                 "family='" + family + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +

@@ -1,13 +1,13 @@
-//package tn.esprit.gestionzoo.entitees;
+package tn.esprit.gestionzoo.entities;//package tn.esprit.gestionzoo.entitees;
 
 public class Zoo {
-
-    public static final int NUMBER_OF_CAGES = 25;
+    public static final int NUMBER_OF_CAGES = 3;
     private Animal[] animals;
     private Aquatic[] aquaticAnimals;
     private String name, city;
     private int nbrAnimals;
     private int nbrAquaticAnimals;
+
 
     public Zoo() {
         animals = new Animal[NUMBER_OF_CAGES];
@@ -35,22 +35,29 @@ public class Zoo {
         System.out.println("Name: " + name + ", City: " + city + ", N° Cages: " + NUMBER_OF_CAGES + ", N° animals: " + nbrAnimals);
     }
 
-    public boolean addAquaticAnimal(Aquatic aquaticAnimal) {
-        if (isAquaticAnimalsFull()) {
-            System.out.println("Le tableau des animaux aquatiques est plein. Impossible d'ajouter plus d'animaux aquatiques.");
-            return false;
-        }
 
-        for (int i = 0; i < nbrAquaticAnimals; i++) {
-            if (aquaticAnimals[i].equals(aquaticAnimal)) {
-                System.out.println("L'animal aquatique " + aquaticAnimal.getName() + " existe déjà dans le zoo.");
-                return false;
+    public void addAnimal(Animal animal) throws ZooFullException {
+        if (nbrAnimals < animals.length) {
+            try {
+                animal.setAge(animal.getAge());  // Vérifie l'âge avant d'ajouter
+                animals[nbrAnimals] = animal;
+                nbrAnimals++;
+                System.out.println("Animal ajouté. Nombre d'animaux : " + nbrAnimals);
+            } catch (InvalidAgeException e) {
+                System.out.println("Erreur : " + e.getMessage());
             }
+        } else {
+            throw new ZooFullException("Le zoo est plein, impossible d'ajouter plus d'animaux.");
         }
-
-        aquaticAnimals[nbrAquaticAnimals] = aquaticAnimal;
-        nbrAquaticAnimals++;
-        return true;
+    }
+    public void addAquaticAnimal(Aquatic aquaticAnimal) throws ZooFullException {
+        if (nbrAquaticAnimals < aquaticAnimals.length) {
+            aquaticAnimals[nbrAquaticAnimals] = aquaticAnimal;
+            nbrAquaticAnimals++;
+            System.out.println("Aquatic animal added. Number of aquatic animals: " + nbrAquaticAnimals);
+        } else {
+            throw new ZooFullException("Le tableau des animaux aquatiques est plein. Impossible d'ajouter plus d'animaux aquatiques.");
+        }
     }
     private boolean isAquaticAnimalsFull() {
         return nbrAquaticAnimals == aquaticAnimals.length;

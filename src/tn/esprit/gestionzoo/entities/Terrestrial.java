@@ -1,3 +1,5 @@
+package tn.esprit.gestionzoo.entities;
+
 public class Terrestrial extends Animal {
     protected int nbrLegs;
 
@@ -12,6 +14,9 @@ public class Terrestrial extends Animal {
 
     public void setNbrLegs(int nbrLegs) {
         this.nbrLegs = nbrLegs;
+    }
+    public void swim() {
+        System.out.println(" this aquatic is animal is swimming ");
     }
 
     @Override

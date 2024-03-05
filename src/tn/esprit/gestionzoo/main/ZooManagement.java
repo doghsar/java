@@ -1,16 +1,19 @@
-/*import tn.esprit.gestionzoo.entitees.Animal;
-import tn.esprit.gestionzoo.entitees.Zoo;*/
+package tn.esprit.gestionzoo.main;
+/*import tn.esprit.gestionzoo.entitees.tn.esprit.gestionzoo.entities.Animal;
+import tn.esprit.gestionzoo.entitees.tn.esprit.gestionzoo.entities.Zoo;*/
+
+import tn.esprit.gestionzoo.entities.Animal;
 
 public class ZooManagement {
     public static void main(String[] args) {
 
-        Animal genericAnimal = new Animal("Generic Family", "Generic Animal", 1, true);
+        Animal genericAnimal = new Animal("Generic Family", "Generic tn.esprit.gestionzoo.entities.Animal", 1, true);
 
-        Aquatic genericAquatic = new Aquatic("Aquatic Family", "Aquatic Animal", 2, true, "Aquatic Habitat");
+     Aquatic genericAquatic = new Aquatic("tn.esprit.gestionzoo.entities.Aquatic Family", "tn.esprit.gestionzoo.entities.Aquatic tn.esprit.gestionzoo.entities.Animal", 2, true, "tn.esprit.gestionzoo.entities.Aquatic Habitat");
 
-        Terrestrial genericTerrestrial = new Terrestrial("Terrestrial Family", "Terrestrial Animal", 3, true, 4);
-        Dolphin dolphin = new Dolphin("Dolphin Family", "Flipper", 5, true, "Ocean", 15.0f);
-        Penguin penguin = new Penguin("Penguin Family", "Chilly", 2, true, "Antarctica", 50.0f);
+        Terrestrial genericTerrestrial = new Terrestrial("tn.esprit.gestionzoo.entities.Terrestrial Family", "tn.esprit.gestionzoo.entities.Terrestrial tn.esprit.gestionzoo.entities.Animal", 3, true, 4);
+        Dolphin dolphin = new Dolphin("tn.esprit.gestionzoo.entities.Dolphin Family", "Flipper", 5, true, "Ocean", 15.0f);
+        Penguin penguin = new Penguin("tn.esprit.gestionzoo.entities.Penguin Family", "Chilly", 2, true, "Antarctica", 50.0f);
 
         displayAnimalInfo(genericAnimal);
         displayAquaticInfo(genericAquatic);
@@ -51,15 +54,15 @@ public class ZooManagement {
     }
 
     private static void displayAnimalInfo(Animal animal) {
-        System.out.println("Animal Info: " + animal);
+        System.out.println("tn.esprit.gestionzoo.entities.Animal Info: " + animal);
     }
 
     private static void displayAquaticInfo(Aquatic aquatic) {
-        System.out.println("Aquatic Info: " + aquatic);
+        System.out.println("tn.esprit.gestionzoo.entities.Aquatic Info: " + aquatic);
     }
 
     private static void displayTerrestrialInfo(Terrestrial terrestrial) {
-        System.out.println("Terrestrial Info: " + terrestrial);
+        System.out.println("tn.esprit.gestionzoo.entities.Terrestrial Info: " + terrestrial);
     }
 
 }
