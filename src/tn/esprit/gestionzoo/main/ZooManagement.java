@@ -1,7 +1,4 @@
 package tn.esprit.gestionzoo.main;
-/*import tn.esprit.gestionzoo.entitees.tn.esprit.gestionzoo.entities.Animal;
-import tn.esprit.gestionzoo.entitees.tn.esprit.gestionzoo.entities.Zoo;*/
-
 import tn.esprit.gestionzoo.entities.Animal;
 
 public class ZooManagement {
@@ -43,7 +40,7 @@ public class ZooManagement {
 
        /* myZoo.addAnimal(lion);
         myZoo.addAnimal(dog);
-        myZoo.addAnimal(dog2);*/
+        myZoo.addAnimal(dog2);
         myZoo.displayAnimals();
         System.out.println("a" + myZoo.removeAnimal(lion));
         myZoo.displayAnimals();
@@ -52,7 +49,7 @@ public class ZooManagement {
         System.out.println("a" + myZoo.removeAnimal(dog));
         myZoo.displayAnimals();
     }
-
+*/
     private static void displayAnimalInfo(Animal animal) {
         System.out.println("tn.esprit.gestionzoo.entities.Animal Info: " + animal);
     }

@@ -1,6 +1,6 @@
 package tn.esprit.gestionzoo.entities;
 
-public class Terrestrial extends Animal {
+public class Terrestrial extends Animal implements Omnivore<Food> {
     protected int nbrLegs;
 
     public Terrestrial(String family, String name, int age, boolean isMammal, int nbrLegs) {

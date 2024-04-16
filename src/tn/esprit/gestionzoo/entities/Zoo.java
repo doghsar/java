@@ -42,9 +42,9 @@ public class Zoo {
                 animal.setAge(animal.getAge());  // Vérifie l'âge avant d'ajouter
                 animals[nbrAnimals] = animal;
                 nbrAnimals++;
-                System.out.println("Animal ajouté. Nombre d'animaux : " + nbrAnimals);
+                System.out.println("Animal ajouté Nombre d'animaux : " + nbrAnimals);
             } catch (InvalidAgeException e) {
-                System.out.println("Erreur : " + e.getMessage());
+                System.err.println("Erreur : " + e.getMessage());
             }
         } else {
             throw new ZooFullException("Le zoo est plein, impossible d'ajouter plus d'animaux.");
