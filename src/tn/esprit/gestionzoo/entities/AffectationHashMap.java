@@ -8,6 +8,7 @@ public class AffectationHashMap {
     private Map<Employee, Departement> affectations;
 
         public AffectationHashMap() {
+
             this.affectations = new HashMap<>();
         }
 
@@ -135,6 +136,7 @@ public class AffectationHashMap {
     private class EmployeeComparatorById implements java.util.Comparator<Employee> {
         @Override
         public int compare(Employee emp1, Employee emp2) {
+
             return Integer.compare(emp1.getId(), emp2.getId());
         }
     }

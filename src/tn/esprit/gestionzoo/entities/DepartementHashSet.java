@@ -1,10 +1,7 @@
 package tn.esprit.gestionzoo.entities;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.TreeSet;
 
-import java.util.HashSet;
-import java.util.TreeSet;
 
 public class DepartementHashSet<T extends Departement> implements IDepartement<T> {
     private HashSet<T> departements;

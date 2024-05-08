@@ -1,6 +1,6 @@
-package tn.esprit.gestionzoo.main;
+package tn.esprit.gestionzoo.entities;
 
-import tn.esprit.gestionzoo.main.Etudiant;
+import tn.esprit.gestionzoo.entities.Etudiant;
 
 import java.util.List;
 import java.util.function.Consumer;

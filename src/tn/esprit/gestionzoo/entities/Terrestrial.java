@@ -3,7 +3,7 @@ package tn.esprit.gestionzoo.entities;
 public class Terrestrial extends Animal implements Omnivore<Food> {
     protected int nbrLegs;
 
-    public Terrestrial(String family, String name, int age, boolean isMammal, int nbrLegs) {
+    public Terrestrial(String family, String name, int age, boolean isMammal, int nbrLegs) throws InvalidAgeException {
         super(family, name, age, isMammal);
         this.nbrLegs = nbrLegs;
     }
@@ -23,5 +23,20 @@ public class Terrestrial extends Animal implements Omnivore<Food> {
     public String toString() {
         return super.toString() +
                 ", nbrLegs=" + nbrLegs;
+    }
+
+    @Override
+    public void eatMeat(Food meat) {
+
+    }
+
+    @Override
+    public void eatPlant(Food plant) {
+
+    }
+
+    @Override
+    public void eatPlantAndMeat(Food food) {
+
     }
 }

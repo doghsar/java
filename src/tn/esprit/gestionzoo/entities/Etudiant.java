@@ -1,4 +1,4 @@
-package tn.esprit.gestionzoo.main;
+package tn.esprit.gestionzoo.entities;
 
 public class Etudiant {
     private int id;
@@ -39,7 +39,7 @@ public class Etudiant {
 
     @Override
     public String toString() {
-        return "tn.esprit.gestionzoo.main.Etudiant {" +
+        return "tn.esprit.gestionzoo.entities.Etudiant {" +
                 "id=" + id +
                 ", nom='" + nom + '\'' +
                 ", age=" + age +
