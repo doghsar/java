@@ -1,7 +1,5 @@
 package tn.esprit.gestionzoo.entities;
 
-import tn.esprit.gestionzoo.entities.Aquatic;
-
 public class Dolphin extends Aquatic {
     protected float swimmingSpeed;
 
@@ -25,5 +23,9 @@ public class Dolphin extends Aquatic {
     public String toString() {
         return super.toString() +
                 ", swimmingSpeed=" + swimmingSpeed;
+    }
+
+    public static interface Carnivore<T> {
+        void eatMeat(T meat);
     }
 }
